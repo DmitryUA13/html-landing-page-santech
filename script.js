@@ -1,3 +1,5 @@
+alert(null || 2 && 3 || 4 );
+
 let money = +prompt("Ваш бюджет на месяц?");
 let date = prompt("Введите дату в формате YYYY-MM-DD");
 
@@ -14,4 +16,5 @@ const appData = {
     savings : false
 }
 let oneDayBudg = money/30;
+console.log(appData);
 alert(oneDayBudg);
