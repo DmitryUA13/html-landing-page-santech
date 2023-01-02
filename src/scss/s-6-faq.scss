@@ -1,0 +1,68 @@
+@import 'mixins.scss';
+
+#faq {
+    background: linear-gradient(0.25turn, $col-yellow , $col-blue-semi);
+    .wrapper {
+
+        display: block;
+    }
+    details {
+        background-color: $col-white;
+        margin: 15px 150px;
+        border-radius: $brd-radius;
+        border: 2px solid $col-blue;
+        padding: 15px 10px;
+        cursor: pointer;
+        summary {
+            font-size: calc($f-size-h3 - 5px);
+            list-style: none;
+        }
+        summary::before {
+            font-size: 30px;
+            content: "\002B";
+            color: $col-yellow;
+            padding-right: 5px;
+        }
+        
+        
+    }
+
+    details[open] {
+        @include shadow;
+        summary::before {
+            content: "\2573"; 
+            color: $col-blue;
+        }
+        
+        p {
+            margin: 5px;
+            padding: 10px;
+            background-color: $col-yellow;
+            border-radius: $brd-radius;
+        } 
+    }
+}
+
+@media screen and (min-width: 1369px){
+    
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1368px){
+    
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+   
+}
+
+@media screen and (max-width: 767px){
+    #faq {
+        details {
+            margin: 15px 10px;
+        }
+    }
+}

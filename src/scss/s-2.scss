@@ -1,0 +1,117 @@
+@import 'mixins.scss';
+
+#screen-2{
+    background: url('/src/img/dots-white.png') no-repeat left 50px top 50px/20%,
+                url('/src/img/dots-white.png') no-repeat right 30px bottom 10px/20%;
+    background-color: $col-grey-semi-bg;
+    td{
+        img {
+            min-width: 20px;
+            margin-right: 10px;
+        }
+    }
+    .wrapper{
+        justify-content: space-between;
+    }
+    .box-left{
+    width: 500px;
+    background-color: $col-green-10-opac;
+    @include brdr-radius;
+    @include padding-15;
+    @include shadow;
+    margin-right: 20px;
+    }
+    .box-right{
+    width: 500px;
+    background-color: $col-warning-10-opac;
+    @include brdr-radius;
+    @include padding-15;
+        td{
+            height: 30px;
+        }
+    }
+}
+@media screen and (min-width: 1369px){
+    
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1368px){
+    
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+   
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+    #screen-2{
+        .box-left{
+        width: 60%;
+        background-color: $col-green-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+        @include shadow;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        }
+        .box-right{
+        width: 60%;
+        background-color: $col-warning-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+            td{
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px){
+    #screen-2{
+        .box-left{
+        width: 100%;
+        background-color: $col-green-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+        @include shadow;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        }
+        .box-right{
+        width: 100%;
+        background-color: $col-warning-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+            td{
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    #screen-2{
+        .box-left{
+        width: 100%;
+        background-color: $col-green-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+        @include shadow;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        }
+        .box-right{
+        width: 100%;
+        background-color: $col-warning-10-opac;
+        @include brdr-radius;
+        @include padding-15;
+            td{
+                height: 30px;
+            }
+        }
+    }
+}

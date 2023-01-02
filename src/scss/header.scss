@@ -1,0 +1,180 @@
+
+@import 'mixins.scss';
+
+header{
+    width: $width-main-sect;
+}
+.button-header.active .button-blue {
+    padding: 15px 25px;
+}
+
+.wrap-header {
+    margin: 0px 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-header{
+    width: 70%;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    
+        li{
+            list-style-type: none;
+            margin-right: auto 20px;
+        }
+}
+
+.header-fixed {
+    display:flex;
+    position: fixed;
+    width: 100%;
+    padding: 0 10px;
+    top: 0px;
+    left: 0px;
+    background-color: $col-white;
+    margin: 0;
+    @include shadow;
+    z-index: 100;
+    animation: header_fixed 500ms forwards;
+}
+
+@keyframes header_fixed {
+    0%{
+        height: 0px;
+    }
+    90% {
+        height: 90px;
+    }
+    100% {
+        height: 80px;
+    }
+}
+
+
+
+@media screen and (min-width: 1025px){
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .wrap-header::before{
+        display: none;
+        position: absolute;
+        content: '';
+        top: 60px;
+        right: -250px;
+        width: 250px;
+        height: 500px;
+        background-color: $col-yellow;
+        z-index: 20;
+        transition: all 350ms ease .5s;
+    }
+    .right-header {
+        display: none;
+        width: 230px;
+        position: absolute;
+        top: 100px;
+        right: -250px;
+        z-index: 20;
+        margin-right: 10px;
+        transition: all 350ms ease .5s;
+        li {
+            margin: 0px 0px 15px 5px;
+            a{
+                color: $col-white;
+            }
+        }
+        .button-header {
+            display: none;
+            position: static;
+            margin-top: 15px;
+        }
+    }
+    .right-header.active {
+        display: block;
+        right: 30px;
+    }
+    .wrap-header.active::before{
+        display: block;
+        right: 0;
+        z-index: 20;
+    }
+    .button-header.active {
+        display: block;
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        z-index: 10;
+    }
+    .hamburger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        
+        &::before, &::after {
+            position: absolute;
+            left: 0px;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $col-blue;
+            transition: all 350ms ease .5s;
+        }
+        &::before {
+            top: 0px;
+        }
+        &::after {
+            top: 20px;
+        }
+        span {
+            position: absolute;
+            left: 0px;
+            top: 10px;
+            width: 100%;
+            height: 2px;
+            background-color: $col-blue;
+            transition: all 350ms ease .5s;
+        }
+    }
+    
+    .hamburger.active {
+        &::before {
+            transform: rotate(53deg);
+            bottom: 0px;
+        }
+        &::after {
+            transform: rotate(-53deg);
+            top: 0px;
+        }
+        span {
+            transform: scale(0);
+       }
+    }
+}    
+
+@media screen and (max-width: 767px){
+    @keyframes header_fixed {
+        0%{
+            height: 0px;
+        }
+        90% {
+            height: 70px;
+        }
+        100% {
+            height: 60px;
+        }
+    }
+    .logo {
+        min-width: 100px;
+        img {
+            width: 60%;
+        }
+    }
+}

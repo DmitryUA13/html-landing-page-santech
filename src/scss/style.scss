@@ -1,0 +1,188 @@
+@import 'variables.scss',
+        'header.scss', 
+        'mixins.scss', 
+        's-1.scss', 
+        's-2.scss', 
+        's-3-video.scss', 
+        's-4-form.scss',
+        's-5-bulits.scss', 
+        's-6-faq.scss',
+        's-7-form.scss',
+        'footer.scss';
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Slab:wght@400;600&display=swap');
+
+
+/**/
+#form-cosult .wrapper .main-form input[type="tel"]._error,
+#form-cosult .wrapper .main-form input[type="text"]._error,
+#form .wrapper .main-form input[type="tel"]._error,
+#form .wrapper .main-form input[type="text"]._error{
+    @include shadow($col-warning);
+    border: 2px solid $col-warning;
+}
+section, footer{
+    width: $width-main-sect;
+    // height: $scr-height-desc;
+    padding: 20px 0px;
+}
+
+
+body{
+    @include fonts ('',$f-fam-text,$f-size-txt, $f-weight-400, $l-height-h4, $col-grey-semi);
+}
+.wrapper{
+    display: flex;
+    margin: 40px $wrap-width-decs;
+}
+
+.flex {
+    display: flex;
+}
+
+
+input[type=submit]{
+    @include btn;
+}
+
+a.button-blue{
+    @include a-btn;
+}
+
+h1{
+    @include fonts ('',$f-fam-headers,$f-size-h1, $f-weight-500, $l-height-h1, $col-black);
+    
+}
+
+h2 {
+    @include fonts (center ,$f-fam-headers,$f-size-h2, $f-weight-500, $l-height-h2, $col-black);
+    margin-bottom: 30px;
+}
+h3{
+    @include fonts (center ,$f-fam-headers,$f-size-h3, $f-weight-500, $l-height-h3, $col-grey);
+    margin: 0px 0px 20px 0px;
+}
+h4{
+    @include fonts (center ,$f-fam-headers,$f-size-h4, $f-weight-400, $l-height-h4, $col-grey);
+    margin-bottom: 15px;
+}
+
+.header_link {
+    text-decoration: none;
+    color: $col-grey-semi;
+    position: relative;
+
+    &:hover{
+        color: $col-blue;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0px;
+        background-color: $col-yellow;
+        transition: width 400ms ease-out, transform 400ms ease-out;
+    }
+    &:hover::before,
+    &:focus::before {
+        left: -5px;
+        bottom: -5px;
+        width: 100%;
+        height: 1.5px;
+        transform: translateX(5px);
+    }
+}
+.disable {
+    display: none;
+}
+.on_vivsible {
+    background-color: $col-blue;
+    @include brdr-radius;
+    color: $col-white;
+    padding: 15px;
+}
+.warn.on_vivsible {
+    background-color: $col-green-10;
+    @include brdr-radius;
+    color: $col-black;
+    padding: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .wrapper {
+        margin: 0px $wrap-width-tabl;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+    .wrapper {
+        margin: 0px $wrap-width-mob;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        line-height: 40px;
+    }
+    h2 {
+        font-size: calc($f-size-h2 * 0.8);
+    }
+    p, a, li, td {
+        font-size: 18px;
+    }
+    th {
+        font-size: 22px;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px){
+    .wrapper {
+        margin: 0px $wrap-width-mob;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        line-height: 40px;
+    }
+    h2 {
+        font-size: calc($f-size-h2 * 0.8);
+    }
+    h4 {
+        font-size: 26px;
+    }
+    p, a, li, td{
+        font-size: 18px;
+    }
+    th {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .wrapper {
+        margin: 0px $wrap-width-mob;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        line-height: 40px;
+    }
+    h2 {
+        font-size: calc($f-size-h2 * 0.8);
+    }
+    h4 {
+        font-size: 26px;
+    }
+    p, a, li, td {
+        font-size: 18px;
+        line-height: $l-height-h4;
+    }
+    th {
+        font-size: 22px;    
+    }
+}

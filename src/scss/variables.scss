@@ -1,0 +1,63 @@
+$brd-radius: 15px;
+$width-main-sect: 100%;
+$wrap-width-decs: 100px;
+$wrap-width-tabl: 60px;
+$wrap-width-mob: 10px;
+$scr-height-desc: 100%;
+$scr-height-tabl: 650px;
+$scr-height-mob: 650px;
+$perc-bg-elem-desc: 22%;
+$perc-bg-elem-tabl: 22%;
+$perc-bg-elem-mob: 22%;
+
+$btn-width: 150px;
+$btn-height: 50px;
+
+
+
+/*Colors*/
+$col-white: #fafafa;
+$col-blue: #2F80ED;
+$col-blue-1: #3473c7;
+$col-blue-semi: #56CCF2;
+$col-yellow: #F2C94C;
+$col-black: #333333;
+$col-grey: #4F4F4F;
+$col-grey-transp-30: #828282;
+$col-grey-semi: #828282;
+$col-grey-semi-bg: #E7E7E7;
+$col-warning: #EB5757;
+$col-warning-10-opac: rgba(235, 87, 87, 0.1);
+$col-green-10: 	rgba(111, 207, 151);
+$col-green-10-opac: 	rgba(111, 207, 151, 0.1);
+
+/*Fonts settings*/
+
+$f-fam-headers: 'Roboto Slab';
+$f-fam-text: 'PT Sans';
+
+$f-weight-400: 400;
+$f-weight-500: 500;
+$f-weight-600: 600;
+
+$f-size-h1: 40px;
+$f-size-h2: 30px;
+$f-size-h3: 22px;
+$f-size-h4: 18px;
+$f-size-txt: 16px;
+
+$l-height-h1: 50px;
+$l-height-h2: 40px;
+$l-height-h3: 28px;
+$l-height-h4: 20px;
+$l-height-txt: 18px;
+
+/*bulit-block (Img -icons on box) Bullits screen*/
+$img-box-width: 100px;
+$img-box-height: $img-box-width;
+
+$img-width: calc($img-box-width * 0.6);
+$img-height: $img-box-width;
+
+$bulit-container-width: 200px;
+

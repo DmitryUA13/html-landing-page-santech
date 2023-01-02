@@ -1,0 +1,68 @@
+@import 'mixins.scss';
+
+#bulits{
+    background: url('/src/img/bg-img.png') no-repeat left top/cover;
+    .wrapper{
+        margin: 0px $wrap-width-decs;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 80px;
+        .bulit-block{
+            width: $bulit-container-width;
+            height: 300px;
+            background: radial-gradient(closest-side, $col-blue-1 , $col-blue);
+            border-radius: $brd-radius;
+            padding: 70px 15px 20px 15px;
+            margin-bottom: calc($img-box-height / 2.5);
+            // margin-right: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10Px;
+            position: relative;
+            color: $col-white;
+            @include shadow;
+            .bulit-img{
+                position: absolute;
+                top: - calc($img-box-height / 2);
+                left: calc($bulit-container-width - ($bulit-container-width / 2) - ($img-box-height / 2));
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $col-yellow;
+                border-radius: 50%;
+                border: 2px solid $col-blue;
+                img{
+                    width: $img-width;
+                    height: $img-height;
+                }
+            }
+            .bulit-body {
+                .h4-header {
+                    color: $col-white;
+                }
+                ul{
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    #bulits {
+        background: url('/src/img/bg-img.png') repeat left 10px top 10px / 100%;
+        .wrapper{
+            margin: 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 80px;
+        }
+    }
+}

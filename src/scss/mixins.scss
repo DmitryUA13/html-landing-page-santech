@@ -1,0 +1,42 @@
+
+
+@mixin shadow ($sh: $col-grey-transp-30){
+    box-shadow: 0px 0px 3px 1px $sh;
+}
+/*Конструктор кнопок*/
+@mixin btn ($w: $btn-width, $h: $btn-height, $bg-col: $col-blue, $col-txt: $col-white){
+    width: $btn-width;
+    height: $h;
+    background-color: $bg-col;
+    border: none;
+    border-radius: 10px;
+    color: $col-txt;
+    @include shadow;
+}
+
+@mixin a-btn ($bg-col: $col-blue, $col-txt: $col-white){
+    text-decoration: none;
+    padding: 15px 70px;
+    background-color: $bg-col;
+    border: none;
+    border-radius: 10px;
+    color: $col-txt;
+    @include shadow;
+}
+
+@mixin fonts ($txt-al: left, $f-fam, $f-size, $f-weight,$l-height , $color){
+    text-align: $txt-al;
+    font-family: $f-fam;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    color:$color
+}
+
+@mixin brdr-radius {
+    border-radius: 15px;
+}
+@mixin padding-15 {
+    padding: 15px;
+}
+

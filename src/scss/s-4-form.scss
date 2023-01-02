@@ -1,0 +1,59 @@
+@import 'mixins.scss';
+
+
+#form {
+    background: url('/src/img/dots-grey.png') no-repeat left 50px top 100px /20%, 
+                url('/src/img/dots-grey.png') no-repeat center bottom 100px /19%,
+                url('/src/img/dots-grey.png') no-repeat right top/22%;
+ 
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .main-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            @include brdr-radius;
+            border: 2px solid $col-blue;
+            background: linear-gradient(45deg, $col-yellow, rgb(248, 209, 34));
+            padding: 30px;
+            input[type="tel"], input[type="text"] {
+                min-height: 50px;
+                @include brdr-radius;
+                @include shadow;
+                border: none;
+                padding-left: 15px;
+            }
+            input[type="button"], input[type="button"]:hover {
+                cursor: pointer;
+            }
+            input[type="button"]:hover {
+                width: 152px;
+                height: 51px;
+            }
+            .checkbox-area{
+                display: flex;
+                justify-content: flex-start;
+            }
+        }        
+    }
+    
+}
+
+
+
+@media screen and (max-width: 767px){
+    #form{
+        .wrapper{
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+            .main-form{
+                gap: 20px;
+            }
+        }
+    }
+}
+
