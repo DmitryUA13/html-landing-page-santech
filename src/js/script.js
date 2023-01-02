@@ -20,7 +20,7 @@ $(document).ready(function(){
         $('.hamburger, .right-header, .wrap-header, .button-header').toggleClass('active');
     });
 });
-const url = "https://script.google.com/macros/s/AKfycbxdI3JwTRegKR0Ga65yDdckpN34g1zjN1IeaLNjPw-wTFOg4n-rdrNnxHfsqvafKzfJ/exec";
+const url = "https://script.google.com/macros/s/AKfycbxdI3JwTRegKR0Ga65FOg4n-rdrNnxHfsqvafKzfJ/exec";
 let form_consult = document.forms.form_cosultat;
 let name_first = form_consult.name;
 
